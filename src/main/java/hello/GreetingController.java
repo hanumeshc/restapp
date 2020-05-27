@@ -1,5 +1,4 @@
 package hello;
-//my comments more comments some more even more one more time one for multi one more for the road and yet another more
 
 import java.sql.Connection;
 import java.sql.DriverManager;
@@ -66,7 +65,7 @@ public class GreetingController {
 	@RequestMapping("/greeting")
 	public String greeting(@RequestParam(value = "name", defaultValue = "World") String name) {
 		LOG.debug("BEGIN: greeting api");  
-		System.out.println("Trigger test: 6");
+		//System.out.println("Trigger test: 6");
 		//LOG.error("Encountered java.lang.InterruptedException while reading the images in the method : /greeting");
 		//LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number ");
 
