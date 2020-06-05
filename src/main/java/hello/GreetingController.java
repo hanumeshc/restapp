@@ -97,7 +97,7 @@ public class GreetingController {
 
 		try{
 			Thread th = new Thread();
-			th.sleep(0);
+			th.sleep(40);
 			LOG.info("Greeting-Latency ");
 			th.start();
 		}catch(Exception ex) {
@@ -146,7 +146,7 @@ public class GreetingController {
 
 			/* Introducing Arch. regression*/
 
-			// whichdog = "dog2";
+			 whichdog = "dog2";
 			/*till here*/
 
 			BufferedReader br2 = new BufferedReader(new InputStreamReader(cl.getResource(whichdog).openStream()));
@@ -197,7 +197,7 @@ public class GreetingController {
 		LOG.debug("BEGIN: dogCount");
 		try{
 			Thread dh = new Thread();
-			dh.sleep(1);
+			dh.sleep(30);
 			writeException1();
 			LOG.info("dogcount-Latency ");
 		}catch(Exception ex) {
@@ -290,7 +290,7 @@ public class GreetingController {
 
 		try{
 			Thread ch = new Thread();
-			ch.sleep(2);
+			ch.sleep(40);
 			//throw new Exception(); 
 			 LOG.info("catcount-Latency ");
 		}catch(Exception ex) {
