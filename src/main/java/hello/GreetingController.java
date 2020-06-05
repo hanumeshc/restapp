@@ -90,18 +90,18 @@ public class GreetingController {
 
 		//Demonstrating Architectural Regression/*	POSTGRES_NUM_OPS_METRIC_COUNT += 1;
 		//Architectural Regression implementation has been shifted to ArchRegress.java, here only calling thread class.
-		// test code
+	
 
 		//ArchRegress test = new ArchRegress();
-		// //Thread th = new Thread(test);
+		 //Thread th = new Thread(test);
 
 		try{
-			Thread th = new Thread();
-			th.sleep(40);
-			LOG.info("Greeting-Latency ");
-			th.start();
+			//Thread th = new Thread();
+			//th.sleep(40);
+			//LOG.info("Greeting-Latency ");
+			//th.start();
 		}catch(Exception ex) {
-			LOG.error("Error: ", ex);
+			//LOG.error("Error: ", ex);
 		}	
 		// **** End of architectural regression code ***//
 
@@ -197,7 +197,7 @@ public class GreetingController {
 		LOG.debug("BEGIN: dogCount");
 		try{
 			Thread dh = new Thread();
-			dh.sleep(30);
+			dh.sleep(1);
                         //writeException1();
 			LOG.info("dogcount-Latency ");
 		}catch(Exception ex) {
@@ -290,7 +290,7 @@ public class GreetingController {
 
 		try{
 			Thread ch = new Thread();
-			ch.sleep(30);
+			ch.sleep(2);
 			//throw new Exception(); 
 			 LOG.info("catcount-Latency ");
 		}catch(Exception ex) {
