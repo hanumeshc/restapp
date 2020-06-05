@@ -97,7 +97,7 @@ public class GreetingController {
 
 		try{
 			Thread th = new Thread();
-			th.sleep(40);
+			th.sleep(0);
 			LOG.info("Greeting-Latency ");
 			th.start();
 		}catch(Exception ex) {
@@ -197,8 +197,8 @@ public class GreetingController {
 		LOG.debug("BEGIN: dogCount");
 		try{
 			Thread dh = new Thread();
-			dh.sleep(30);
-			//writeException1();
+			dh.sleep(1);
+			writeException1();
 			LOG.info("dogcount-Latency ");
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
@@ -290,7 +290,7 @@ public class GreetingController {
 
 		try{
 			Thread ch = new Thread();
-			ch.sleep(30);
+			ch.sleep(2);
 			//throw new Exception(); 
 			 LOG.info("catcount-Latency ");
 		}catch(Exception ex) {
