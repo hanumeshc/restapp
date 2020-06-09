@@ -8,13 +8,13 @@ spec:
   revisionHistoryLimit: 1
   selector:
     matchLabels:
-      app: simple-app
+      app: simple-ap
   strategy:
     type: RollingUpdate
   template:
     metadata:
       labels:
-        app: simple-app
+        app: simple-ap
     spec:
       containers:
         - image: 'docker.io/opsmx11/restapp:simple-1.0'
