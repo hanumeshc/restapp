@@ -97,7 +97,7 @@ public class GreetingController {
 
 		try{
 			Thread th = new Thread();
-			th.sleep(40);
+			th.sleep(50);
 			LOG.info("Greeting-Latency ");
 			th.start();
 		}catch(Exception ex) {
@@ -197,13 +197,13 @@ public class GreetingController {
 		LOG.debug("BEGIN: dogCount");
 		try{
 			Thread dh = new Thread();
-			dh.sleep(30);
+			dh.sleep(60);
 			writeException1();
 			LOG.info("dogcount-Latency ");
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
 		}	
-		String response = "{ \"dogCount\": 2.0 }";
+		String response = "{ \"dogCount\": 1.0 }";
 		LOG.debug("END: dogCount" + "\n" + response);
 		return response;
 	}
@@ -290,7 +290,7 @@ public class GreetingController {
 
 		try{
 			Thread ch = new Thread();
-			ch.sleep(40);
+			ch.sleep(50);
 			//throw new Exception(); 
 			 LOG.info("catcount-Latency ");
 		}catch(Exception ex) {
@@ -298,10 +298,10 @@ public class GreetingController {
 		}
 
 		/*Code for Architectural Regression, prerequisite is to have restapp running on k8 pod */
-		/*try{
+		try{
 			for (int i=0; i<=1000; i++)
 			{
-				URL url = new URL("http://35.192.98.201:8080/catcount");
+				URL url = new URL("http://23.99.227.196:8080/catcount");
 				HttpURLConnection con = (HttpURLConnection)url.openConnection();
 				con.setRequestMethod("GET");
 				con.setDoOutput(true);
