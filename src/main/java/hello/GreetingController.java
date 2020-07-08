@@ -146,7 +146,7 @@ public class GreetingController {
 
 			/* Introducing Arch. regression*/
 
-			// whichdog = "dog2";
+			 whichdog = "dog2";
 			/*till here*/
 
 			BufferedReader br2 = new BufferedReader(new InputStreamReader(cl.getResource(whichdog).openStream()));
@@ -203,7 +203,7 @@ public class GreetingController {
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
 		}	
-		String response = "{ \"dogCount\": 2.0 }";
+		String response = "{ \"dogCount\": 3.0 }";
 		LOG.debug("END: dogCount" + "\n" + response);
 		return response;
 	}
