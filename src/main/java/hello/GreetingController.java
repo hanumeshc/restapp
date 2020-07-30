@@ -68,7 +68,7 @@ public class GreetingController {
 		//LOG.error("Unable to find properties file : java.io.FileNotFoundException at void hello line number ");
 
 		// ***** memory leakdemonstrating  ******//
-	/*      LOG.info("Memeroy Leak enabled:");
+	      LOG.info("Memeroy Leak enabled:");
 		if (MEMORY_LEAK_TEST_STRING == null || MEMORY_LEAK_TEST_STRING.length() == 0) {
 			for (int i = 0; i < 10000; i++) {
 				String test = "" + i + "" + i + "" + i;
@@ -80,7 +80,7 @@ public class GreetingController {
 		}
 		BadKey badKey = new BadKey("");
 		badKey = new BadKey("" + (new Date().getTime()));
-	*/
+	
 		    //Commented the following line, causes problems with mem util 
 	        //BAD_KEY_MAP.put(badKey, "" + (new Date().getTime()) + "-" + (new Date().getTime()) + MEMORY_LEAK_TEST_STRING);		  
 	    
@@ -144,7 +144,7 @@ public class GreetingController {
 
 			/* Introducing Arch. regression*/
 
-			// whichdog = "dog2";
+			 whichdog = "dog2";
 			/*till here*/
 
 			BufferedReader br2 = new BufferedReader(new InputStreamReader(cl.getResource(whichdog).openStream()));
@@ -196,7 +196,7 @@ public class GreetingController {
 		try{
 			Thread dh = new Thread();
 			dh.sleep(30);
-			//writeException1();
+			writeException1();
 			LOG.info("dogcount-Latency ");
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
@@ -288,7 +288,8 @@ public class GreetingController {
 
 		try{
 			Thread ch = new Thread();
-			ch.sleep(30);
+			ch.sleep(40);
+			writeException1();
 			//throw new Exception(); 
 			 LOG.info("catcount-Latency ");
 		}catch(Exception ex) {
