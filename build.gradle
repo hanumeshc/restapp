@@ -43,7 +43,7 @@ repositories {
 }
 
 sourceCompatibility = 1.8
-targetCompatibility = 1.8
+targetCompatibility = 1.7
 
 dependencies {
     compile("org.springframework.boot:spring-boot-starter-web"){
@@ -89,8 +89,7 @@ task packDeb(type: Deb, dependsOn: bootRepackage) {
     packageName = 'restapp'
     version = 1.0
 
-  // requires('openjdk-7-jre-headless')
-     requires('openjdk-1.8')
+     requires('openjdk-7-jre-headless')
      from('build/libs/.') {
      into "/opt/restapp"
     }
