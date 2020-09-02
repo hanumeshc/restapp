@@ -90,7 +90,7 @@ task packDeb(type: Deb, dependsOn: bootRepackage) {
     version = 1.0
 
   // requires('openjdk-7-jre-headless')
-     requires('java8')
+     requires('openjdk 1.8')
      from('build/libs/.') {
      into "/opt/restapp"
     }
