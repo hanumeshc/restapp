@@ -42,7 +42,7 @@ repositories {
     jcenter()
 }
 
-sourceCompatibility = 1.8
+sourceCompatibility = 1.7
 targetCompatibility = 1.8
 
 dependencies {
