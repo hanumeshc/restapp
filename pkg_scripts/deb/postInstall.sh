@@ -1,7 +1,7 @@
 #!/bin/bash
 
-ln -s /opt/restapp/restapp-0.1.0.jar /etc/init.d/restapp
-sudo /etc/init.d/restapp start
+ln -sfn /opt/restapp/restapp-0.1.0.jar /etc/init.d/restapp
+#sudo /etc/init.d/restapp start
 update-rc.d  -f restapp defaults
 #sudo /etc/init.d/restapp stop
 
@@ -14,7 +14,7 @@ update-rc.d  -f restapp defaults
 #sudo chmod 777 /opt/newrelic/*.jar 
 #sudo nohup java -Dserver.port=8080 -javaagent:/opt/newrelic/newrelic.jar -jar /opt/restapp/restapp-0.1.0.jar &
 #sudo nohup java -Dserver.port=8080 -jar /opt/restapp/restapp-0.1.0.jar > /var/log/restapp.out 2>&1
-sudo nohup java -Dserver.port=8080 -jar /opt/restapp/restapp-0.1.0.jar &
+exec  java -Dserver.port=8080 -jar /opt/restapp/restapp-0.1.0.jar 2>&1 > /var/log/restapp.log &
 #sudo echo "export testvar=aws" >> ~/.bash_profile 
 ## PROMETHEUS AGENT TEST
 #sudo /etc/init.d/restapp stop

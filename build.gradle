@@ -89,12 +89,13 @@ task packDeb(type: Deb, dependsOn: bootRepackage) {
     packageName = 'restapp'
     version = 1.0
 
-     requires('openjdk-7-jre-headless')
+    // requires('openjdk-7-jre-headless')
      from('build/libs/.') {
      into "/opt/restapp"
     }
-	
-   postInstall = file('pkg_scripts/deb/postInstall.sh')
+    postInstall = file('pkg_scripts/deb/postInstall.sh')
+    //preUninstall = file('pkg_scripts/rpm/preUninstall.sh')
+    //postUninstall = file('pkg_scripts/rpm/postUninstall.sh') 
   
     from(jar.outputs.files) {
         into 'lib'
@@ -113,10 +114,10 @@ task packRpm(type: Rpm, dependsOn: bootRepackage) {
     release = '1'
     os = LINUX
 
-   requires('java')
+    requires('java')
      from('build/libs/.') {
      into "/opt/restapp"
-  }
+    }
     postInstall = file('pkg_scripts/rpm/postInstall.sh')
     preUninstall = file('pkg_scripts/rpm/preUninstall.sh')
     postUninstall = file('pkg_scripts/rpm/postUninstall.sh')
@@ -131,5 +132,5 @@ task packRpm(type: Rpm, dependsOn: bootRepackage) {
     from(configurations.runtime) {
         into 'lib'
     }
-
 }
+

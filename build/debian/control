@@ -1,0 +1,15 @@
+Source: restapp
+Section: java
+Priority: optional
+Maintainer: ubuntu
+Uploaders: 
+Version: 1.0
+Standards-Version: 3.8.3
+Package: restapp
+Provides: restapp
+Homepage: 
+Architecture: all
+Distribution: 
+Depends: 
+Description: restapp
+ 
