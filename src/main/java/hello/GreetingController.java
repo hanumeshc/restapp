@@ -197,13 +197,13 @@ public class GreetingController {
 		LOG.debug("BEGIN: dogCount");
 		try{
 			Thread dh = new Thread();
-			dh.sleep(30);
+			dh.sleep(5);
 			writeException1();
 			LOG.info("dogcount-Latency ");
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
 		}	
-		String response = "{ \"dogCount\": 2.0 }";
+		String response = "{ \"dogCount-Java-1.8\": 2.0 }";
 		LOG.debug("END: dogCount" + "\n" + response);
 		return response;
 	}
@@ -290,7 +290,7 @@ public class GreetingController {
 
 		try{
 			Thread ch = new Thread();
-			ch.sleep(30);
+			ch.sleep(5);
 			//throw new Exception(); 
 			 LOG.info("catcount-Latency ");
 		}catch(Exception ex) {
@@ -334,7 +334,7 @@ public class GreetingController {
 	@RequestMapping("/status")
 	public String getStatus() {
 		LOG.debug("BEGIN: getStatus");
-		String response = " @@@@@@ Welcome to  Strategy World  @@@@@@";
+		String response = " @@@@@@ Welcome to  Strategy World  JAVA-8 @@@@@@";
 		LOG.debug("END: getStatus" + "\n" + response);
 		return response;
 	}
