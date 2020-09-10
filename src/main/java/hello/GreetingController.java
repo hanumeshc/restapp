@@ -203,7 +203,7 @@ public class GreetingController {
 		}catch(Exception ex) {
 			LOG.error("Error: ", ex);
 		}	
-		String response = "{ \"dogCount-Java-1.8\": 2.0 }";
+		String response = "{ \"dogCount\": 2.0 }";
 		LOG.debug("END: dogCount" + "\n" + response);
 		return response;
 	}
