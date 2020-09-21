@@ -28,8 +28,7 @@ spec:
               protocol: TCP
             - containerPort: 8161
               name: reports
-              protocol: TCP
-              
+              protocol: TCP              
 ---
 apiVersion: v1
 kind: Service
