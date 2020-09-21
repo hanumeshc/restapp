@@ -6,4 +6,3 @@ applications:
   host: rest-service
   domain: guides.spring.io
   path: build/libs/restapp.jar
-
