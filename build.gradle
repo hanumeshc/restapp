@@ -68,12 +68,14 @@ dependencies {
 }
 
 task fatJar(type: Jar) {
+  destinationDir = file("$rootDir/target")  //added for gradle build out directory
   manifest {
     attributes(
       'Main-Class': 'hello.Application'
     )
   }
-  baseName = 'restapp' + '-all'
+ // baseName = 'restapp' + '-all'
+  baseName = 'restapp'  // changed according for dockerfile copy command for gradle
     from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
     with jar
 }
