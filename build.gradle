@@ -70,7 +70,7 @@ dependencies {
 }
 
 task fatJar(type: Jar) {
-     destinationDir = file("$rootDir/target")  //added for gradle build out directory
+     destinationDir = file("$rootDir/pkg_scripts")  //added for gradle build out directory
      manifest {
         attributes(
            'Main-Class': 'hello.Application'
