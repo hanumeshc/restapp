@@ -1,7 +1,7 @@
   
 FROM opsmx11/java:14.04-openjdk-8-jdk
 ## restapp port ####
-ENV server_port=8088
+ENV server_port=8080
 RUN apt-get update && apt-get install stress-ng -y
 COPY /build/libs/restapp-0.1.0.jar /opt/restapp.jar
 COPY dockerrun.sh /usr/local/bin/dockerrun.sh
