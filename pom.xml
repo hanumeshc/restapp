@@ -103,6 +103,18 @@
 			<url>https://repo.spring.io/libs-release</url>
 		</repository>
 	</repositories>
+	<distributionManagement>
+    	<repository>
+        	<id>restapp</id>
+        	<name>release softx</name>
+        	<url>http://nexus.opsmx.com:8081/repository/demo-release/</url>
+    	</repository>
+    	<snapshotRepository>
+        	<id>restapp</id>
+        	<name>snapshot softx</name>
+        	<url>http://nexus.opsmx.com:8081/repository/demo-snapshot/</url>
+    	</snapshotRepository>
+	</distributionManagement>
 	<pluginRepositories>
 		<pluginRepository>
 			<id>spring-releases</id>
